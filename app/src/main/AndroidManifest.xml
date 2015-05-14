@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.dygame.nonuiandroidservice" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+<!--                 android:theme="@android:style/Theme.NoTitleBar.Fullscreen" > -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.google.android.gms.ads.AdActivity"
+                  android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"/>
+        <meta-data android:name="com.google.android.gms.version"
+                   android:value="@integer/google_play_services_version"/>
+        <service android:name=".MyService" />
+<!--        <service android:name=".MyService" android:process=":dy_service_proc" android:label="DYService" android:enabled="true" android:exported="true" /> -->
+    </application>
+    <receiver android:name="MyReceiver" >
+        <intent-filter>
+            <action android:name="android.intent.action.BOOT_COMPLETED" />  <!-- 開機廣播 -->
+            <action android:name="com.dygame.myandroidservice.broadcast" />
+            <action android:name="com.dygame.nonuiandroidservice.broadcast" />
+        </intent-filter>
+    </receiver>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/> <!-- MyCrashHandler saveFile to SDcard -->
+</manifest>

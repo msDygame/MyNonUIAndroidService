@@ -1,0 +1,10 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
+<!--  <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar"> -->
+<!-- 解決 support v7的問題 -->
+        <!-- Customize your theme here. -->
+    </style>
+
+</resources>

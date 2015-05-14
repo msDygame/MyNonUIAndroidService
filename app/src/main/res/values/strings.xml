@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">NonUIAndroidService</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="string_start_service">START SERVICE</string>
+    <string name="string_stop_service">STOP SERVICE</string>
+    <string name="string_bind_service">BIND SERVICE</string>
+    <string name="string_unbind_service">UNBIND_SERVICE</string>
+    <string name="string_my_ad_unit_id">ca-app-pub-3940256099942544-6300978111</string>
+    <string name="string_my_in_unit_id">ca-app-pub-3940256099942544-6300978112</string>
+</resources>
